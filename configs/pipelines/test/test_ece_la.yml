@@ -1,0 +1,30 @@
+exp_name: "'@{dataset.name}'_'@{network.name}'_'@{pipeline.name}'_'@{evaluator.name}'_'@{postprocessor.name}'_'@{mark}'"
+output_dir: ./results/
+save_output: True
+merge_option: default # disabled if 'save_output' is False
+mark: default # to mark the version of experiment
+
+num_gpus: 1
+num_workers: 4
+num_machines: 1
+machine_rank: 0
+
+network:
+  pretrained: True
+
+pipeline:
+  name: test_ood
+  tune_temperature: True
+  num_models: 5
+
+evaluator:
+  name: ece_la
+
+recorder:
+  name: wandb
+  project: default
+  experiment: default
+  group: ""
+  save_all_models: False
+  save_scores: True
+  save_csv: True

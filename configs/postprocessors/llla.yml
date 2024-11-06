@@ -1,0 +1,7 @@
+postprocessor:
+  name: llla
+  APS_mode: False
+  postprocessor_args:
+    llla_type: 'ef' # Type of LLLA: ef, k-fac, ggn, icla
+    checkpoint_path: "" # Path to checkpoint
+    optimize_precision: true # Whether to optimize prior precision or not

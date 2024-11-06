@@ -1,0 +1,38 @@
+ood_dataset:
+  name: tin_ood
+  num_classes: 200
+  
+  num_workers: '@{num_workers}'
+  num_gpus: '@{num_gpus}'
+  num_machines: '@{num_machines}'
+
+  dataset_class: ImglistDataset
+  batch_size: 128
+  shuffle: False
+
+  split_names: [val, nearood, farood]
+  val:
+    data_dir: /data/images_classic/
+    imglist_pth: /data/benchmark_imglist/tin/val_tin.txt
+  nearood:
+    datasets: [cifar10, cifar100]
+    cifar10:
+      data_dir: /data/images_classic/
+      imglist_pth: /data/benchmark_imglist/tin/test_cifar10.txt
+    cifar100:
+      data_dir: /data/images_classic/
+      imglist_pth: /data/benchmark_imglist/tin/test_cifar100.txt
+  farood:
+    datasets: [mnist, svhn, texture, places365]
+    mnist:
+      data_dir: /data/images_classic/
+      imglist_pth: /data/benchmark_imglist/tin/test_mnist.txt
+    svhn:
+      data_dir: /data/images_classic/
+      imglist_pth: /data/benchmark_imglist/tin/test_svhn.txt
+    texture:
+      data_dir: /data/images_classic/
+      imglist_pth: /data/benchmark_imglist/tin/test_texture.txt
+    places365:
+      data_dir: /data/images_classic/
+      imglist_pth: /data/benchmark_imglist/tin/test_places365.txt
