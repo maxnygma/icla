@@ -1,5 +1,7 @@
 # Identity Curvature Laplace Approximation
-<img src="img/laplace.png" alt="pic" style="width:75%;">
+<p align="center">
+    <img src="img/laplace.png" alt="drawing" width="500"/>
+</p>
 
 This repo contains official implementation of 
 **[Identity Curvature Laplace Approximation for Improved Out-of-Distribution Detection](https://arxiv.org/pdf/2312.10464) [WACV 2025]** by Maksim Zhdanov, Stanislav Dereka and Sergey Kolesnikov.
